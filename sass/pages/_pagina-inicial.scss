@@ -1,0 +1,199 @@
+.pagina-principal{
+    margin-top: 110px;
+}
+.pagina-principal__texto-imagem{
+    background: #121B2A;
+    position: relative;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: space-around;
+}
+.pagina-principal__texto-imagem:after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform-origin: top right;
+    transform: skewY(-4deg);
+}
+.texto-imagem__texto{
+    flex: 1 1 50%;
+    padding: 40px 0px 40px 60px;
+}
+
+.texto-imagem__texto h1{
+    color: #f9f9f9;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 35px;
+} 
+.texto-imagem__texto p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 19px;
+    color: #aeaeae;
+    letter-spacing: 2px;
+    word-spacing: 3.5px;
+}
+.texto-imagem__imagem{
+    flex: 1 1 50%;
+    text-align: center;
+}
+.container-noticia{
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.noticia__item{
+    position: relative;
+    flex: 1 1 25%;
+    margin: 15px;
+    height: auto;
+    text-align: center;
+    box-shadow: 1px 3px 5px rgb(90, 89, 89);
+    transform: scale(0.87,0.87);
+    transition: all 500ms cubic-bezier(0.66,-0.62, 0.27, 1.55);
+}
+.noticia__item:hover{
+    transform: scale(0.95, 0.95);
+}
+.noticia__item-categoria{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fdfdfd;
+    width: 50%;
+    background-color: #407BFF;
+    padding: 5px;
+    border-radius: 0px 3px 5px 0px;
+    box-shadow: 0px 4px 5px rgb(185, 185, 185);
+}
+.noticia__item-imagem img{
+    padding: 5px;
+    max-width: 45%;
+}
+.noticia__item-texto{
+    background-color: #407BFF;
+    padding: 30px;
+    text-align: center;
+}
+.noticia__item-texto__titulo{
+    color: #fff;
+}
+.noticia__item-texto p{
+    text-align: justify;
+    padding: 10px 0 30px 0;
+    color: #fff;
+    font-size: 20px
+}
+.noticia__item-texto__link-acessar{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+@media screen and (max-width: 1200px){
+    .container-noticia{
+        margin-top: 0px;
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding: 50px;
+        flex-direction: column;
+    }
+    .noticia__item{
+        position: relative;
+        flex: 1 1 50%;
+        margin: 0px;
+        margin-bottom: 20px;
+        height: auto;
+        text-align: center;
+        box-shadow: 1px 3px 5px rgb(90, 89, 89);
+        transform: scale(0.85,0.85);
+        transition: all 500ms cubic-bezier(0.66,-0.62, 0.27, 1.55);
+    }
+    .noticia__item:hover{
+        transform: scale(0.95, 0.95);
+    }
+    .noticia__item-texto{
+        padding: 20px;
+    }
+    .noticia__item-texto .noticia__item-texto__link-acessar a{
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 3px solid #fff;
+        border-radius: 20px;
+        padding: 10px 50px;
+    } 
+    .pagina-principal{
+        margin-top: 110px;
+    }
+    .pagina-principal__texto-imagem{
+        background: #121B2A;
+        position: relative;
+        max-width: 100%;
+        height: 660px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .pagina-principal__texto-imagem:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: #121b2a;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transform-origin: top right;
+        transform: skewY(-4deg);
+    }
+    .texto-imagem__texto{
+        flex: 1 1 100%;
+        padding: 0px 0px 0px 0px;
+    }
+    .texto-imagem__texto h1{
+        color: #f9f9f9;
+        width: 100%;
+        margin: 0 auto;
+        font-size: 35px;
+    } 
+    .texto-imagem__texto p{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+        line-height: 20px;
+        font-size: 19px;
+        color: #aeaeae;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+    }
+    .texto-imagem__imagem{
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    .texto-imagem__imagem img{
+        max-width: 90%;
+        padding: 10px;
+    }
+}

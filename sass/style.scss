@@ -1,0 +1,23 @@
+//Abstrações: medidas, cores e etc.
+@import 'abstracts/_cores';
+
+//Base: base do site, reset.
+@import 'base/_meu-reset';
+
+//Components: estilização das partes principais do site.
+@import 'components/_barra-pesquisa';
+@import 'components/_cabecalho-logo';
+@import 'components/_menu-principal';
+
+//Layout: estilização de partes especificas: rodapé e cabeçalho.
+@import 'layout/_cabecalho';
+@import 'layout/_rodape';
+
+//Paginas: estilização que abrange o conteúdo de uma página específica.
+@import 'pages/_cadastro_categorias';
+@import 'pages/_cadastro_noticias';
+@import 'pages/_pagina-inicial';
+
+//Temas: estilização feita para um usuário específico adm ou algo assim.
+
+//Vendors: código de terceiros como normalize e outros.

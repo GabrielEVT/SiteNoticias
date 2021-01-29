@@ -1,0 +1,36 @@
+.search-caixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 0px 5px;
+    background-color: #363D4D;
+}
+.search-input{
+    outline: none;
+    border: none;
+    background-color: #363D4D;
+    color: #fff;
+    width: 300px;
+    font-size: 10pt;
+    padding-left: 10px;
+}
+.search-button__imagem{
+    width: 30px;
+}
+@media screen and (max-width: 1200px){
+    .search-caixa{
+        margin-right: 60px;
+    }
+    .search-input{
+        outline: none;
+        border: none;
+        background-color: #363D4D;
+        width: 190px;
+        font-size: 10pt;
+        padding-left: 10px;
+    }
+    .search-button__imagem{
+        width: 30px;
+    }
+}
