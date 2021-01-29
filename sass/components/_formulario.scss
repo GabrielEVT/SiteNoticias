@@ -1,0 +1,131 @@
+.formulario{
+    width: 500px;
+    height: auto;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12pt;
+    select, label, input, textarea{
+        margin: 30px 0px;
+        font-size: 12pt;
+        border-radius: 10px;
+    }
+    &__h1{
+        max-width: 100%;
+        font-size: 40px;
+        font-weight: thin;
+        text-align: center; 
+        color: $cor-principal;
+    } 
+    input{
+        max-width: 100%;
+        height: auto;
+        outline: none;
+        padding: 15px;
+        padding-right: 20px;
+        border: none;
+        background-color: $cor-principal;
+        border-radius: 10px;      color: $cor-input;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+        color: $cor-input;
+    }
+    select{
+        border: 2px solid orange;
+        width: 100%;
+        padding: 15px;
+        outline: none;
+        border: none;
+        color: $cor-input;
+        background-color: $cor-principal;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+    }
+    label{
+        width: 50%;
+        height: auto;
+        padding: 15px 15px;
+        font-size: 11pt;
+        color: white;
+        border-radius: 10px;
+        background-color: $cor-principal;
+        display: inline-block;
+        font-weight: #fff;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+    label img{
+        vertical-align: middle;
+        display: inline-block;
+        transform: translateY(-2px);
+        margin-right: 7px;
+    }
+    input[type="file"]{
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        color: $cor-input;
+    }
+    .text-area{
+        padding: 17px;
+        background-color: $cor-principal;
+        outline: none;
+        border-radius: 10px;
+        height: 180px;
+        max-width: 100%;
+        color: white;
+    }
+    ::-webkit-input-placeholder {
+        color: $cor-input;
+        font-family: Montserrat;
+    }
+    :-moz-placeholder {
+        color: $cor-input;
+        font-family: Montserrat;
+    }
+    ::-moz-placeholder {
+        color: $cor-input;  
+        font-family: Montserrat;
+    } 
+    :-ms-input-placeholder {  
+        color: $cor-input;  
+        font-family: Montserrat;
+    }
+    .container__reset-submit{
+        display: flex;
+        justify-content: space-around;
+    } 
+    .button{
+        width: 40%;
+        font-size: 20px;
+        height: auto;
+        padding: 12px 8px;
+        cursor: pointer;
+    }
+    #input-limpar{
+        background: transparent;
+        color: rgb(141, 141, 141);  
+        font-weight: bold;
+        border: 3px solid rgb(141, 141, 141);
+        transition: all 300ms ease;
+    }
+    #input-limpar:hover{
+        background-color: rgb(141, 141, 141);
+        color: #fff;
+        border: 3px solid rgb(141, 141, 141);
+        transform: translateY(-5px);
+    }
+    #input-salvar{
+        background: #407bff;
+        font-weight: bold;
+        color: #fff;
+        transition: all 300ms ease;
+        
+    }
+    #input-salvar:hover{
+        transform: translateY(-5px);
+    }
+}
