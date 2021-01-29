@@ -32,7 +32,6 @@
         color: $cor-input;
     }
     select{
-        border: 2px solid orange;
         width: 100%;
         padding: 15px;
         outline: none;
@@ -127,5 +126,14 @@
     }
     #input-salvar:hover{
         transform: translateY(-5px);
+    }
+}
+@media screen and (max-width: 1200px){
+    .formulario{
+        width: 400px;
+        padding-top: 20px;
+        label{
+            width: 65%;
+        }
     }
 }
