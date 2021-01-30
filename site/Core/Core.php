@@ -40,7 +40,6 @@
                 $metodo = 'index';          
             }
             $caminho = 'site/Controllers/'.$controller.'.php';
-            echo $caminho;
             if(!file_exists($caminho) && !method_exists($controller, $metodo))
             {
                 $controller = 'exibir_noticiasController';
