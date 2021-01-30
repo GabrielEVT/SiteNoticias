@@ -3,7 +3,9 @@
     {
         public function index()
         {
-            $this->carregarTemplate('exibir_noticias');
+            $noticias = new Noticias();
+            $dados = $noticias -> exibirTodasNoticias();
+            $this->carregarTemplate('exibir_noticias', $dados);
         }
     }
 ?>

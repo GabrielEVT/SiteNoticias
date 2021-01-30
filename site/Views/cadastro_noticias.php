@@ -6,7 +6,7 @@
             <option value="" selected disabled hidden>Selecione a categoria</option>
         </select>
         <label for="arquivo">
-            <img src="img/seleciona-imagem-icone.png" alt=""> Selecione uma imagem
+            <img src="Midias/img/seleciona-imagem-icone.png" alt=""> Selecione uma imagem
         </label>
         <input type="file" name="arquivo" id="arquivo">
         <textarea class="text-area" name="corpo" cols="30" rows="10" placeholder="Corpo da notícia"></textarea>

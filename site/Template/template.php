@@ -24,15 +24,21 @@
         </label>
         <nav class="menu-principal">
             <ul class="menu-principal__lista">
-                <li class="menu-principal__itens"><a href="index.html" class="menu-principal__links menu-principal__links--atual">ver notícias</a></li>
-                <li class="menu-principal__itens"><a href="cadastro_noticias.html" class="menu-principal__links">cadastrar notícias</a></li>
-                <li class="menu-principal__itens"><a href="#" class="menu-principal__links">cadastrar categorias</a></li>
+                <li class="menu-principal__itens">
+                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/exibir_noticias" class="menu-principal__links menu-principal__links">ver notícias</a>
+                </li>
+                <li class="menu-principal__itens">
+                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/cadastro_noticias" class="menu-principal__links">cadastrar notícias</a>
+                </li>
+                <li class="menu-principal__itens">
+                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/cadastro_categorias" class="menu-principal__links">cadastrar categorias</a>
+                </li>
             </ul>
         </nav>
     </header>
     <!-- MAIN -->
     <?php 
-        $this->carregarViewNoTemplate($nomeView);
+        $this->carregarViewNoTemplate($nomeView, $dadosModel);
     ?>
     <footer class="rodape">
         <div class="footer-superior">
