@@ -22,6 +22,20 @@
 
         <!-- NOTÍCIAS CARREGADAS DO BANCO DE DADOS -->
         <section class="container-noticia">
+        <div class="noticia__item">
+                <p class="noticia__item-categoria">categoria</p>
+                <div class="noticia__item-imagem">
+                    <img src="Midias/img/foto-generica.png" alt="">
+                </div>
+                <div class="noticia__item-texto">
+                    <h1 class="noticia__item-texto__titulo">Pharetra, mauris</h1>
+                    <p class="noticia__item-texto__paragrafo">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis esse sunt culpa porro nostrum 
+                        eius adipisci, unde distinctio laboriosam blanditiis cumque quis dolor?
+                    </p>
+                    <a class="noticia__item-texto__link-acessar" href="#">acessar</a>
+                </div>
+            </div>
         <?php
             for($i=0; $i < count($this->dados); $i++)
             {?>

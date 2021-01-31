@@ -17,6 +17,17 @@
 
         public function cadastrarNoticia($titulo, $texto, $idcategoria, $imagem)
         {
-            $insertcomand = $this->conexao->query("INSERT INTO `tbl_noticia`(`idnoticia`, `titulonoticia`, `conteudonoticia`, `fk_categoria`, `imgnoticias`) VALUES (null, '$titulo', '$texto', '$idcategoria', '$imagem')");
+            $diretorio = "Midias/img-database/";
+            if(isset($_POST['titulo']) && !empty($_POST['titulo']))
+            {
+                $insertcomand = "INSERT INTO `tbl_noticia`(`idnoticia`, `titulonoticia`, `conteudonoticia`, `fk_categoria`, `imgnoticias`) VALUES (null, '$titulo', '$texto', '$idcategoria', '$imagem')"; 
+                if($this->conexao->query($insertcomand))
+                {
+                    // require 'process.php';
+                    move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$imagem);
+                }
+        
+            }
         }
+
     }

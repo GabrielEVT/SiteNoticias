@@ -3,9 +3,9 @@
     {
         public function index()
         {
-            $noticias = new Noticias();
-            // $dados = $noticias -> cadastrarNoticia($titulo, $texto, $idcategoria, $imagem);
-            $this->carregarTemplate('cadastro_noticias');
+            $categoria = new Categoria();
+            $dados = $categoria -> exibirCategoriaCombobox();
+            $this->carregarTemplate('cadastro_noticias', $dados);
         }
 
     }
