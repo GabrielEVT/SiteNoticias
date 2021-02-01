@@ -19,7 +19,7 @@
 
                 $controller = $url[0].'Controller';
                 array_shift($url);
-
+                
                 if(isset($url[0]) && !empty($url[0]))
                 {
                     $metodo = $url[0];

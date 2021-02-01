@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/sass/style.css">
+    <link rel="stylesheet" href="./Styles/css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
@@ -25,13 +25,13 @@
         <nav class="menu-principal">
             <ul class="menu-principal__lista">
                 <li class="menu-principal__itens">
-                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/exibir_noticias" class="menu-principal__links menu-principal__links">ver notícias</a>
+                    <a href="exibir_noticias" class="menu-principal__links menu-principal__links">ver notícias</a>
                 </li>
                 <li class="menu-principal__itens">
-                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/cadastro_noticias" class="menu-principal__links">cadastrar notícias</a>
+                    <a href="cadastro_noticias" class="menu-principal__links">cadastrar notícias</a>
                 </li>
                 <li class="menu-principal__itens">
-                    <a href="http://localhost/Projects/Project-Store/projeto-noticias-site/site/cadastro_categorias" class="menu-principal__links">cadastrar categorias</a>
+                    <a href="cadastro_categorias" class="menu-principal__links">cadastrar categorias</a>
                 </li>
             </ul>
         </nav>
@@ -40,6 +40,7 @@
     <?php 
         $this->carregarViewNoTemplate($nomeView, $dadosModel);
     ?>
+    <!-- /MAIN -->
     <footer class="rodape">
         <div class="footer-superior">
             <div class="cabecalho-logo">

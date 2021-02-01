@@ -14,6 +14,7 @@ require 'autoload.php';
         $titulo = addslashes($_POST['titulo']);
         $categoria = addslashes($_POST['fk_categoria']);
         $corpo = addslashes($_POST['corpo']);
+        
         $noticia = new Noticias();
         $noticia -> cadastrarNoticia($titulo, $corpo, $categoria, $novo_nome);
         header("location: cadastro_noticias");

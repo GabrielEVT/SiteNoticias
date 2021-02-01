@@ -1,4 +1,5 @@
 <?php
+
     class cadastro_categoriasController extends Controller
     {
         public function index()
