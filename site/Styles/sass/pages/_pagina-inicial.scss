@@ -80,6 +80,11 @@
     border-radius: 0px 3px 5px 0px;
     box-shadow: 0px 4px 5px rgb(185, 185, 185);
 }
+.noticia__item-imagem{
+    width:100%;
+    height: 37%;
+    border: 1px solid orange;
+}
 .noticia__item-imagem img{
     padding: 5px;
     max-width: 45%;

@@ -73,7 +73,9 @@
         background-color: $cor-principal;
         outline: none;
         border-radius: 10px;
-        height: 180px;
+        min-height: 180px;
+        height: auto;
+        min-width: 100%;
         max-width: 100%;
         color: white;
     }
