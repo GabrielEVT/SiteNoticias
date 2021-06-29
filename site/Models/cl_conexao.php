@@ -27,9 +27,7 @@
                 }
             }
             return self::$pdo;
-        }
-
-      
+        }  
     }
 ?>
   

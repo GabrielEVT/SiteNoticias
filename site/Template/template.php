@@ -12,12 +12,14 @@
 <body>
     <header class="cabecalho">
         <div class="cabecalho-logo"><img src="Midias/img/logotipo.svg" alt="Logo"></div>
-        <div class="search-caixa">
-            <input class="search-input" type="search" placeholder="Procure por...">
-            <a class="search-button__link" href="#">
+        <form class="search-caixa"
+            method="POST" action="process.php">
+            <input class="search-input" type="search" placeholder="Procure por..." name="search">
+            <button class="search-button__link" type="submit">
                 <img class="search-button__imagem" src="Midias/img/search-img.png" alt="Lupa">
-            </a>
-        </div>
+            </button>
+        </form>
+        
         <input type="checkbox" id="menu-hamburguer">
         <label for="menu-hamburguer">
             <span class="hamburguer"></span>
