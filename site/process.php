@@ -21,11 +21,7 @@ require 'autoload.php';
     }   
     elseif(isset($_GET['search']))
     {
-        $search = addslashes($_GET['search']);
-
-        $noticia = new Noticias();
-        $noticia -> pesquisa($search);
-        $exibir = new exibir_noticiasController();
-        $exibir -> index();
+        $exibirPesquisa = new exibir_noticiasController();
+        $exibirPesquisa -> index();
     }
 ?>
