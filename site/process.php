@@ -19,13 +19,13 @@ require 'autoload.php';
         $noticia -> cadastrarNoticia($titulo, $corpo, $categoria, $novo_nome);
         header("location: cadastro_noticias");
     }   
-    elseif(isset($_POST['search']))
+    elseif(isset($_GET['search']))
     {
-        $search = addslashes($_POST['search']);
+        $search = addslashes($_GET['search']);
 
         $noticia = new Noticias();
-        echo "<pre>";
-        print_r($noticia -> pesquisa($search));
-        echo "</pre>";
+        $noticia -> pesquisa($search);
+        $exibir = new exibir_noticiasController();
+        $exibir -> index();
     }
 ?>

@@ -17,7 +17,7 @@
 
         public function pesquisa($search)
         {
-            $selectcomand = $this->conexao->query("SELECT n.idnoticia, n.titulonoticia, n.conteudonoticia, n.imgnoticias, c.nomecategoria FROM tbl_noticia n INNER JOIN tbl_categoria c ON n.fk_categoria = c.idcategoria WHERE n.titulonoticia OR c.nomecategoria LIKE '%$search%' LIMIT 5");
+            $selectcomand = $this->conexao->query("SELECT n.idnoticia, n.titulonoticia, n.conteudonoticia, n.imgnoticias, c.nomecategoria FROM tbl_noticia n INNER JOIN tbl_categoria c ON n.fk_categoria = c.idcategoria WHERE n.titulonoticia LIKE '%$search%' OR c.nomecategoria LIKE '%$search%'LIMIT 5");
             $resultQuery = $selectcomand->fetchAll(PDO::FETCH_ASSOC);
             return $resultQuery;
         }

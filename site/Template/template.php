@@ -13,7 +13,7 @@
     <header class="cabecalho">
         <div class="cabecalho-logo"><img src="Midias/img/logotipo.svg" alt="Logo"></div>
         <form class="search-caixa"
-            method="POST" action="process.php">
+            method="GET" action="process.php">
             <input class="search-input" type="search" placeholder="Procure por..." name="search">
             <button class="search-button__link" type="submit">
                 <img class="search-button__imagem" src="Midias/img/search-img.png" alt="Lupa">
