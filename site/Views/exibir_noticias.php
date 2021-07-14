@@ -18,7 +18,7 @@
         </section>
         <section class="cards-noticias">
             <div class="noticia-item">
-                <div class="noticia-categoria">CATEGORIA</div>
+                <div class="noticia-categoria">categoria</div>
                 <img class= "noticia-imagem" src="https://source.unsplash.com/user/willianjusten/1800x801" alt="">
                 <div class="noticia-informacoes">
                     <h1 class="noticia-titulo">Título notícia</h1>
