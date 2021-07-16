@@ -11,6 +11,7 @@ function CadastrarNoticia() {
         mensagemTituloNoticia.setAttribute("class", "validacaoSucesso")
         mensagemTituloNoticia.innerHTML = "Ok!"
     }
+
     let campoCategoriaNoticia = document.getElementById('campo-categoria-noticia').value
     let mensagemCategoriaNoticia = document.getElementById('categoria-noticia-mensagem')
     if(campoCategoriaNoticia == 'vazio'){
@@ -18,8 +19,19 @@ function CadastrarNoticia() {
         mensagemCategoriaNoticia.innerHTML = "Selecione uma categoria"
     } else {
         mensagemCategoriaNoticia.setAttribute("class", "validacaoSucesso")
-        mensagemCategoriaNoticia.innerHTML = "Ok"
+        mensagemCategoriaNoticia.innerHTML = "Ok!"
     }
+
+    let arquivoImagem = document.getElementById('arquivo')
+    let mensagemImagemNoticia = document.getElementById('imagem-noticia-mensagem')
+    if(arquivoImagem.value == '') {
+        mensagemImagemNoticia.setAttribute("class", "validacaoInvalida")
+        mensagemImagemNoticia.innerHTML = "Selecione uma imagem"
+    } else {
+        mensagemImagemNoticia.setAttribute("class", "validacaoSucesso")
+        mensagemImagemNoticia.innerHTML = "Ok!"
+    }
+
     let campoCorpoNoticia = document.getElementById('campo-corpo-noticia').value
     let mensagemCorpoNoticia = document.getElementById('corpo-noticia-mensagem')
     if(campoCorpoNoticia.length == 0) {
