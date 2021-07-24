@@ -61,38 +61,47 @@
     //minmax: cada card possui no minimo 300px width
     //1fr: possui no máximo 1fr, 1 fração do container;
     row-gap: 50px;
-    column-gap: 70px;
+    column-gap: 30px;
 }
 .noticia-item{
     background: #0066ff;
     color: #fff;
     padding-bottom: 50px;
     position: relative;
-    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
     transition: 200ms;
 }
+.noticia-item__container-imagem{
+    background: #000000;
+    overflow: hidden;
+}
 .noticia-item:hover{
-    transform: scale(1.025, 1.025);
     box-shadow: 0px 0px 16px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    .noticia-imagem{
+        opacity: 0.7;
+        transform: scale(1.4);
+    }
 }
 .noticia-categoria{
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: 10px;
     padding-left: 0;
     width: 50%;
     background: rgba(0, 102, 255, 0.8);
     border-radius: 0px 0px 25px 0px;
     position: absolute;
+    z-index: 1;
 }
 .noticia-imagem{
     width: 100%;
     height: 200px;
+    display: block;
     object-fit: cover;
+    transition: all 200ms;
 }
 .noticia-informacoes{
-    padding: 15px;
+    padding: 15px;      
 }
 .noticia-titulo{
     text-align: left;

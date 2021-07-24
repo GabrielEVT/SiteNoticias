@@ -19,7 +19,9 @@
         <section class="cards-noticias">
             <div class="noticia-item">
                 <div class="noticia-categoria">categoria</div>
-                <img class= "noticia-imagem" src="https://source.unsplash.com/user/willianjusten/1800x801" alt="">
+                <div class="noticia-item__container-imagem">
+                    <img class= "noticia-imagem" src="https://source.unsplash.com/user/willianjusten/1800x801" alt="">
+                </div>
                 <div class="noticia-informacoes">
                     <h1 class="noticia-titulo">Título notícia</h1>
                     <p class="noticia-paragrafo">
@@ -36,10 +38,12 @@
                 {?>
                     <div class="noticia-item">
                         <div class="noticia-categoria"><?php echo $this->dados[$i]['nomecategoria']?></div>
-                        <img class="noticia-imagem" src="
-                        <?php 
-                            echo 'Midias/img-database/'.$this->dados[$i]['imgnoticias'];
-                        ?>" alt="">
+                        <div class="noticia-item__container-imagem">
+                            <img class="noticia-imagem" src="
+                            <?php 
+                                echo 'Midias/img-database/'.$this->dados[$i]['imgnoticias'];
+                            ?>" alt="">
+                        </div>
                         <div class="noticia-informacoes">
                             <h1 class="noticia-titulo"><?php echo $this->dados[$i]['titulonoticia']?></h1>
                             <p class="noticia-paragrafo"><?php echo $this->dados[$i]['conteudonoticia']?></p>
