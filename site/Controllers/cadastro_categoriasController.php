@@ -7,7 +7,7 @@
             $this->carregarTemplate('cadastro_categorias');
         }
         
-        public function inserirCategoria()
+        public function cadastrar()
         {
             if(isset($_POST['categoria']) && !empty($_POST['categoria']))
             {
@@ -17,7 +17,8 @@
                     $objCategoria = new Categoria();
                     $objCategoria -> cadastrarCategoria($nova_categoria);
                 }
-                header("location: cadastro_categorias");
+
+                $this->carregarTemplate('cadastro_categorias');
             }
         }
     }

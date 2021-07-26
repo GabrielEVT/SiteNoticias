@@ -22,15 +22,5 @@
             $dados = $noticias -> pesquisa($pesquisa);
             $this->carregarTemplate('exibir_noticias', $dados);
         }
-        // public function editarNoticia()
-        // {
-        //     $noticias = new Noticias();
-        //     if(isset($_GET['idnoticia']))
-        //     {
-                
-        //         $dados = $noticias -> carregarNoticiasPorId($idnoticia);
-        //         $this->carregarTemplate('editar_noticias', $dados);
-        //     }
-        // }
     }
 ?>

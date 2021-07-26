@@ -1,5 +1,5 @@
 <main class="pagina-cadastro" id="noticia">
-    <form action="process.php" method="post" enctype="multipart/form-data" class="formulario">
+    <form action="cadastro_noticias/cadastrar" method="post" enctype="multipart/form-data" class="formulario">
         <h1 class="formulario__h1">Cadastro de Notícias</h1> 
         <input type="text" name="titulo" placeholder="Título" id="campo-titulo-noticia">
         <div id="titulo-noticia-mensagem"></div>
@@ -8,9 +8,8 @@
             <?php
                 for($i=0; $i < count($this->dados); $i++)
                 {?>
-                    <option value="<?php echo $this->dados[$i]['idcategoria'];?>">
-                    <?php
-                        echo $this->dados[$i]['nomecategoria'];
+                    <option value="<?=$this->dados[$i]['idcategoria'];?>">
+                    <?=$this->dados[$i]['nomecategoria'];
                     ?>
                     </option>
                 <?php

@@ -37,7 +37,7 @@
                 for($i=0; $i < count($this->dados); $i++)
                 {?>
                     <div class="noticia-item">
-                        <div class="noticia-categoria"><?php echo $this->dados[$i]['nomecategoria']?></div>
+                        <div class="noticia-categoria"><?=$this->dados[$i]['nomecategoria']?></div>
                         <div class="noticia-item__container-imagem">
                             <img class="noticia-imagem" src="
                             <?php 
@@ -45,8 +45,8 @@
                             ?>" alt="">
                         </div>
                         <div class="noticia-informacoes">
-                            <h1 class="noticia-titulo"><?php echo $this->dados[$i]['titulonoticia']?></h1>
-                            <p class="noticia-paragrafo"><?php echo $this->dados[$i]['conteudonoticia']?></p>
+                            <h1 class="noticia-titulo"><?=$this->dados[$i]['titulonoticia']?></h1>
+                            <p class="noticia-paragrafo"><?=$this->dados[$i]['conteudonoticia']?></p>
                             <a class="noticia-editar" href="<?='editar_noticias/index/'.$this->dados[$i]['idnoticia']?>">EDITAR<?=$this->dados[$i]['idnoticia'];?></a>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
             {?>
                 
                 <div class="noticia__item">
-                    <p class="noticia__item-categoria"><?php echo $this->dados[$i]['nomecategoria']?></p>
+                    <p class="noticia__item-categoria"><?=$this->dados[$i]['nomecategoria']?></p>
                     <div class="noticia__item-imagem">
                         <img src="
                         <?php
@@ -152,7 +152,7 @@
                     </div>
                     <div class="noticia__item-texto">
                         <h1 class="noticia__item-teTítulo notícia?php echo $this->dados[$i]['titulonoticia']?></h1>
-                        <p class="noticia__item-texto__paragrafo"><?php echo $this->dados[$i]['conteudonoticia']?></p>
+                        <p class="noticia__item-texto__paragrafo"><?=$this->dados[$i]['conteudonoticia']?></p>
                         <a class="noticia__item-texto__link-acessar" href="#">acessar</a>
                     </div>
                 </div>
