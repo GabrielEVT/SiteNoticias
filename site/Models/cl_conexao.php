@@ -10,10 +10,12 @@
                 $dsn = 'mysql:host=localhost;dbname=db_noticias';
                 $username = 'root';
                 $password = '';
-            
+                $opcoes = array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8'
+                );
                 try
                 {
-                    self::$pdo = new PDO($dsn, $username, $password);
+                    self::$pdo = new PDO($dsn, $username, $password, $opcoes);
                 }
                 catch(PDOException $error)
                 {
