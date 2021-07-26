@@ -10,28 +10,31 @@
             $this->carregarTemplate('editar_noticias', $dados);
         }
 
-        public function updateNoticiasPorId()
+        public function editar($idnoticia)
         {
             $extensao = strtolower(substr($_FILES['arquivo']['name'], -4));
             $novo_nome_img = md5(time()).$extensao;
     
-            $titulo = addslashes($_POST['titulo']);
+            $titulo = addslashes($_POST['novo_titulo']);
             $categoria = addslashes($_POST['fk_categoria']);
             $corpo = addslashes($_POST['corpo']);
-        
-            if ($this->verificarCamposDuplicados(['campo' => 'idnoticia'], "tbl_noticia", "titulonoticia", $titulo) == true)
-            {
-                $objNoticia = new Noticias();
-                $objNoticia -> cadastrarNoticia($titulo, $corpo,  $categoria, $novo_nome_img);
-            }
-            header("location: cadastro_noticias");
+
+            $objNoticia = new Noticias();
+            $objNoticia -> updateNoticiaPorId($idnoticia, $titulo, $corpo,  $categoria, $novo_nome_img);    
+
+            // REGARREGAR PÁGINA APENAS COM A NOTICIA EDITADA
+            $dados = $objNoticia -> carregarNoticiasPorId($idnoticia);
+            $this->carregarTemplate('exibir_noticias', $dados);
         }
 
-        public function deletarNoticia($idnoticia)
+        public function deletar($idnoticia)
         {
             $noticias = new Noticias();
-            $noticias -> deletarNoticia($idnoticia);
-            $this->carregarTemplate('exibir_noticias', $noticias);
+            $noticias -> deletarNoticiaPorId($idnoticia);
+            
+            // RECARREGAR A PÁGINA SEM A NOTÍCIA DELETADA
+            $dados = $noticias -> exibirTodasNoticias();
+            $this->carregarTemplate('exibir_noticias', $dados);
         }
     }
 ?>

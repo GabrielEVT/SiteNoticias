@@ -85,7 +85,7 @@
             }
         }
 
-        public function deletarNoticia($idnoticia) : bool
+        public function deletarNoticiaPorId($idnoticia) : bool
         {
             $deletecomand = "DELETE FROM 
                                         `tbl_noticia`
@@ -96,5 +96,25 @@
                 return true;
             }
             return false;
+        }
+
+        public function updateNoticiaPorId($idnoticia, $titulo, $texto, $idcategoria, $imagem) : bool
+        {
+            $diretorio = "Midias/img-database/";
+            $updatecomand = $this->conexao->prepare("UPDATE 
+                                `tbl_noticia` 
+                            SET 
+                                `titulonoticia`  = :novotitulo,
+                                `conteudonoticia`= :novoconteudo,
+                                `fk_categoria`   = :novacategoria,
+                                `imgnoticias`    = :novaimagem
+                            WHERE 
+                                `idnoticia` = $idnoticia");
+            $updatecomand -> bindValue(":novotitulo", $titulo);
+            $updatecomand -> bindValue(":novoconteudo", $texto);
+            $updatecomand -> bindValue(":novacategoria", $idcategoria);
+            $updatecomand -> bindValue(":novaimagem", $imagem);
+            $updatecomand -> execute();
+            return true;
         }
     }
