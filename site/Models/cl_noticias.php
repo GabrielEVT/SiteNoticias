@@ -114,7 +114,10 @@
             $updatecomand -> bindValue(":novoconteudo", $texto);
             $updatecomand -> bindValue(":novacategoria", $idcategoria);
             $updatecomand -> bindValue(":novaimagem", $imagem);
-            $updatecomand -> execute();
-            return true;
+            if($updatecomand -> execute()){
+                move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$imagem);
+                return true;
+            }
+            return false;
         }
     }
