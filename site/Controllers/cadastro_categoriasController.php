@@ -7,21 +7,18 @@
             $this->carregarTemplate('cadastro_categorias');
         }
         
-        public function insertDados()
+        public function inserirCategoria()
         {
-            
-            // if(isset($_POST['categoria']) && !empty($_POST['categoria']))
-            // {
-            //     $objectcategoria = new Categoria();
-            //     $categoria = addslashes($_POST['categoria']);
-            //     $objectcategoria->cadastrarCategoria($categoria);
-            //     header("location: ../Views/cadastro_categorias");
-            // }
+            if(isset($_POST['categoria']) && !empty($_POST['categoria']))
+            {
+                $nova_categoria = addslashes($_POST['categoria']);
+                if ($this->verificarCamposDuplicados(["campo" => "idcategoria"], "tbl_categoria", 'nomecategoria', $nova_categoria) == true)
+                {
+                    $objCategoria = new Categoria();
+                    $objCategoria -> cadastrarCategoria($nova_categoria);
+                }
+                header("location: cadastro_categorias");
+            }
         }
-        // public function insert()
-        // {
-        //     Categoria::cadastrarCategoria($_POST);
-        // }
     }
-    // var_dump($_POST['categoria']);
 ?>

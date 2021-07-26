@@ -47,10 +47,11 @@
                         <div class="noticia-informacoes">
                             <h1 class="noticia-titulo"><?php echo $this->dados[$i]['titulonoticia']?></h1>
                             <p class="noticia-paragrafo"><?php echo $this->dados[$i]['conteudonoticia']?></p>
-                            <a class="noticia-editar" href="#">EDITAR</a>
+                            <a class="noticia-editar" href="<?='editar_noticias/index/'.$this->dados[$i]['idnoticia']?>">EDITAR<?=$this->dados[$i]['idnoticia'];?></a>
                         </div>
                     </div>
                 <?php    
+                
                 }
             ?>
             <!-- <div class="noticia-item">
