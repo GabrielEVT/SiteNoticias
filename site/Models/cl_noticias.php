@@ -87,14 +87,27 @@
 
         public function deletarNoticiaPorId($idnoticia) : bool
         {
+            $diretorio = "Midias/img-database/";
             $deletecomand = "DELETE FROM 
                                         `tbl_noticia`
                                     WHERE
                                         `idnoticia` = $idnoticia";
-            if($this->conexao->query($deletecomand))
-            {
+
+            // SELECT DA IMAGEM PARA SUA REMOÇÃO NA APLICAÇÃO
+            $selectimagemdeletada = $this->conexao->query("SELECT 
+                                                        `imgnoticias` 
+                                                    FROM 
+                                                        `tbl_noticia` 
+                                                    WHERE 
+                                                        `idnoticia` = $idnoticia");
+            $imagemdeletada = $selectimagemdeletada->fetchAll(PDO::FETCH_ASSOC);
+            // TRANSFORMANDO O ARRAY EM STRING
+            $imagemdeletada = $imagemdeletada[0]['imgnoticias'];
+            // FUNÇÃO UNLINK PARA DELETAR A IMAGEM
+            if((unlink($diretorio.$imagemdeletada) == true) && ($this->conexao->query($deletecomand)))
+            {                
                 return true;
-            }
+            }  
             return false;
         }
 
@@ -114,7 +127,10 @@
             $updatecomand -> bindValue(":novoconteudo", $texto);
             $updatecomand -> bindValue(":novacategoria", $idcategoria);
             $updatecomand -> bindValue(":novaimagem", $imagem);
-            $updatecomand -> execute();
-            return true;
+            if($updatecomand -> execute()){
+                move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$imagem);
+                return true;
+            }
+            return false;
         }
     }
