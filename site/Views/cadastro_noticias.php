@@ -29,5 +29,6 @@
             <input type="submit" value="Salvar" class="button" id="input-salvar">
         </div>
     </form>
+    <h5> <?= $this->dados['mensagem'] ?></h5>
     <script src="./Scripts/validarCadastroNoticia.js"></script>
 </main>

@@ -21,8 +21,13 @@
             {
                 $objNoticia = new Noticias();
                 $objNoticia -> cadastrarNoticia($titulo, $corpo,  $categoria, $novo_nome_img);
+                $mensagem = ['mensagem' => "<p id='Error_message' style='color: green;'>Notícia cadastrada com sucesso."];
             }
-            $this->carregarTemplate('cadastro_noticias');
+            else
+            {
+                $mensagem = ['mensagem' => "<p id='Error_message' style='color: red;'>ERRO! Notícia já cadastrada.</p>"];
+            }
+            $this->carregarTemplate('cadastro_noticias', $mensagem);
         }
     }
 ?>
