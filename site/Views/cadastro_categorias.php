@@ -4,4 +4,5 @@
         <input type="text" name="categoria" placeholder="Digite a nova categoria">
         <center><input type="submit" value="Salvar" class="button" id="input-salvar"></center>
     </form>
+    <h5> <?= $this->dados['mensagem'] ?></h5>
 </main>   

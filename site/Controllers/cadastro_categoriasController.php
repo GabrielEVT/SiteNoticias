@@ -16,9 +16,13 @@
                 {
                     $objCategoria = new Categoria();
                     $objCategoria -> cadastrarCategoria($nova_categoria);
+                    $mensagem = ['mensagem' => "<p id='Error_message' style='color: green;'>Categoria cadastrada com sucesso."];
                 }
-
-                $this->carregarTemplate('cadastro_categorias');
+                else
+                {
+                    $mensagem = ['mensagem' => "<p id='Error_message' style='color: red;'>ERRO! Categoria já cadastrada.</p>"];
+                }
+                $this->carregarTemplate('cadastro_categorias', $mensagem);
             }
         }
     }
